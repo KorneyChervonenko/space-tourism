@@ -5,19 +5,23 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import './App.scss';
 
-import Homepage from './pages/Home/Homepage.jsx';
+import Home from './pages/Home/Home.jsx';
 import Destination from './pages/Destination/Destination.jsx';
 import Crew from './pages/Crew/Crew.jsx';
 import Technology from './pages/Crew/Technology.jsx';
 import PageNotFound from './pages/PageNotFound/PageNotFound.jsx';
+import PageNav from './components/PageNav/PageNav.jsx';
 
 export default function App() {
 	return (
 		<main>
 			<h1 className="visually-hidden">Space tourism</h1>
 			<BrowserRouter>
+				<PageNav />
 				<Routes>
-					<Route index element={<Homepage />} />
+					{/* <Route index element={<Home />} /> */}
+					<Route index element={<Navigate replace to="home" />} />
+					<Route path="home" element={<Home />} />
 					<Route path="destination" element={<Destination />} />
 					<Route path="crew" element={<Crew />} />
 					<Route path="technology" element={<Technology />} />
