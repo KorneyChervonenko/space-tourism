@@ -2,10 +2,39 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 // import './App.css'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import './App.scss';
 
+import Homepage from './pages/Home/Homepage.jsx';
+import Destination from './pages/Destination/Destination.jsx';
+import Crew from './pages/Crew/Crew.jsx';
+import Technology from './pages/Crew/Technology.jsx';
+import PageNotFound from './pages/PageNotFound/PageNotFound.jsx';
+
 export default function App() {
-	return <div>App</div>;
+	return (
+		<main>
+			<h1 className="visually-hidden">Space tourism</h1>
+			<BrowserRouter>
+				<Routes>
+					<Route index element={<Homepage />} />
+					<Route path="destination" element={<Destination />} />
+					<Route path="crew" element={<Crew />} />
+					<Route path="technology" element={<Technology />} />
+					{/* <Route path="pricing" element={<Pricing />} /> */}
+					{/* <Route path="login" element={<Login />} /> */}
+					{/* <Route path="app" element={<AppLayout />}>
+					<Route index element={<Navigate replace to="cities" />} />
+					<Route path="cities" element={<CityList cities={cities} isLoading={isLoading} />} />
+					<Route path="cities/:id" element={<City />} />
+					<Route path="countries" element={<CountryList cities={cities} isLoading={isLoading} />} />
+					<Route path="form" element={<Form />} />
+				</Route> */}
+					<Route path="*" element={<PageNotFound />} />
+				</Routes>
+			</BrowserRouter>
+		</main>
+	);
 }
 
 // function App() {
