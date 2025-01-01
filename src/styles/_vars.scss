@@ -1,0 +1,54 @@
+// @import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
+
+:root {
+	@font-face {
+		font-family: 'Bellefair';
+		// src: url('Bellefair-Regular.woff2') format('woff2');
+		src: url('../../src/assets/fonts/Bellefair-Regular.woff2') format('woff2');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+}
+
+$mobile-width: 23.44rem;
+// $mobile-min-height: 42rem;
+// $desktop-width: 59rem;
+// $desktop-height: 37.5rem;
+// $main-width-mobile: 20.5rem;
+// $main-width-desktop: 37.5rem;
+$threshold-width: 70rem;
+// @max-width-desktop: 90rem;
+
+:root {
+	font-family: 'Bellefair', serif;
+	font-optical-sizing: auto;
+	// font-size: 24px;
+
+	--fs-150: 9.375rem; // 150px
+	--fs-100: 6.25rem; // 100px
+	--fs-80: 5rem; // 80px
+	--fs-56: 3.5rem; // 56px
+	--fs-40: 2.5rem; // 40px
+	--fs-38: 2.38rem; // 38px
+	--fs-32: 2rem; // 32px
+	--fs-28: 1.75rem; // 28px
+	--fs-26: 1.625rem; // 26px
+	--fs-24: 1.5rem; // 24px
+	--fs-22: 1.38rem; // 22px
+	--fs-20: 1.25rem; // 20px
+	--fs-18: 1.125rem; // 18px
+	--fs-16: 1rem; // 16px
+	--fs-15: 0.9375rem; // 15px
+	--fs-14: 0.875rem; // 14px
+	--fs-13: 0.8125rem; // 13px
+	--fs-12: 0.75rem; // 12px
+	--fs-10: 0.625rem; // 10px
+
+	--border-radius-mobile: 0.75rem;
+	--border-radius-desktop: 0.875rem;
+}
+
+// button:where(:hover, :focus) {
+// 	cursor: pointer;
+// }
