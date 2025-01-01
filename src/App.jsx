@@ -11,6 +11,7 @@ import Crew from './pages/Crew/Crew.jsx';
 import Technology from './pages/Crew/Technology.jsx';
 import PageNotFound from './pages/PageNotFound/PageNotFound.jsx';
 import PageNav from './components/PageNav/PageNav.jsx';
+import Planet from './components/PageNav/Planet/Planet.jsx';
 
 export default function App() {
 	return (
@@ -22,7 +23,13 @@ export default function App() {
 					{/* <Route index element={<Home />} /> */}
 					<Route index element={<Navigate replace to="home" />} />
 					<Route path="home" element={<Home />} />
-					<Route path="destination" element={<Destination />} />
+					<Route path="destination" element={<Destination />}>
+						<Route index element={<Navigate replace to="moon" />} />
+						<Route path="moon" element={<Planet planetName="moon" />} />
+						<Route path="mars" element={<Planet planetName="mars" />} />
+						<Route path="europa" element={<Planet planetName="europa" />} />
+						<Route path="titan" element={<Planet planetName="titan" />} />
+					</Route>
 					<Route path="crew" element={<Crew />} />
 					<Route path="technology" element={<Technology />} />
 
@@ -42,34 +49,3 @@ export default function App() {
 		</main>
 	);
 }
-
-// function App() {
-//   const [count, setCount] = useState(0)
-
-//   return (
-//     <>
-//       <div>
-//         <a href="https://vite.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.jsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>
-//     </>
-//   )
-// }
-
-// export default App
