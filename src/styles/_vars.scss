@@ -9,6 +9,150 @@
 		font-style: normal;
 		font-display: swap;
 	}
+
+	@font-face {
+		font-family: 'Barlow Condensed';
+		src: url('../../src/assets/fonts/BarlowCondensed-BoldItalic.woff2') format('woff2');
+		font-weight: bold;
+		font-style: italic;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Barlow Condensed';
+		src: url('../../src/assets/fonts/BarlowCondensed-Medium.woff2') format('woff2');
+		font-weight: 500;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Barlow Condensed';
+		src: url('../../src/assets/fonts/BarlowCondensed-Bold.woff2') format('woff2');
+		font-weight: bold;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Barlow Condensed';
+		src: url('../../src/assets/fonts/BarlowCondensed-ExtraBoldItalic.woff2') format('woff2');
+		font-weight: bold;
+		font-style: italic;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Barlow Condensed';
+		src: url('../../src/assets/fonts/BarlowCondensed-LightItalic.woff2') format('woff2');
+		font-weight: 300;
+		font-style: italic;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Barlow Condensed';
+		src: url('../../src/assets/fonts/BarlowCondensed-Italic.woff2') format('woff2');
+		font-weight: normal;
+		font-style: italic;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Barlow Condensed';
+		src: url('../../src/assets/fonts/BarlowCondensed-BlackItalic.woff2') format('woff2');
+		font-weight: 900;
+		font-style: italic;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Barlow Condensed';
+		src: url('../../src/assets/fonts/BarlowCondensed-Black.woff2') format('woff2');
+		font-weight: 900;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Barlow Condensed';
+		src: url('../../src/assets/fonts/BarlowCondensed-Light.woff2') format('woff2');
+		font-weight: 300;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Barlow Condensed';
+		src: url('../../src/assets/fonts/BarlowCondensed-ExtraLight.woff2') format('woff2');
+		font-weight: 200;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Barlow Condensed';
+		src: url('../../src/assets/fonts/BarlowCondensed-ExtraLightItalic.woff2') format('woff2');
+		font-weight: 200;
+		font-style: italic;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Barlow Condensed';
+		src: url('../../src/assets/fonts/BarlowCondensed-ExtraBold.woff2') format('woff2');
+		font-weight: bold;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Barlow Condensed';
+		src: url('../../src/assets/fonts/BarlowCondensed-ThinItalic.woff2') format('woff2');
+		font-weight: 100;
+		font-style: italic;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Barlow Condensed';
+		src: url('../../src/assets/fonts/BarlowCondensed-SemiBoldItalic.woff2') format('woff2');
+		font-weight: 600;
+		font-style: italic;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Barlow Condensed';
+		src: url('../../src/assets/fonts/BarlowCondensed-MediumItalic.woff2') format('woff2');
+		font-weight: 500;
+		font-style: italic;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Barlow Condensed';
+		src: url('../../src/assets/fonts/BarlowCondensed-Thin.woff2') format('woff2');
+		font-weight: 100;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Barlow Condensed';
+		src: url('../../src/assets/fonts/BarlowCondensed-SemiBold.woff2') format('woff2');
+		font-weight: 600;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Barlow Condensed';
+		src: url('../../src/assets/fonts/BarlowCondensed-Regular.woff2') format('woff2');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
 }
 
 $mobile-width: 23.44rem;
@@ -21,7 +165,10 @@ $threshold-width: 70rem;
 // @max-width-desktop: 90rem;
 
 :root {
-	font-family: 'Bellefair', serif;
+	font-family: serif;
+	// font-family: 'Bellefair', serif;
+	// font-family: 'Barlow Condensed', serif;
+
 	font-optical-sizing: auto;
 	// font-size: 24px;
 
@@ -45,8 +192,8 @@ $threshold-width: 70rem;
 	--fs-12: 0.75rem; // 12px
 	--fs-10: 0.625rem; // 10px
 
-	--border-radius-mobile: 0.75rem;
-	--border-radius-desktop: 0.875rem;
+	// --border-radius-mobile: 0.75rem;
+	// --border-radius-desktop: 0.875rem;
 }
 
 // button:where(:hover, :focus) {
