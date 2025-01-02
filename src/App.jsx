@@ -1,4 +1,4 @@
-// todo Destination=> Destinations ?
+// todo PlanetNav, MemberNav, TechNav => UniNav
 
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -52,10 +52,9 @@ export default function App() {
 			<BrowserRouter>
 				<PageNav />
 				<Routes>
-					{/* <Route index element={<Home />} /> */}
 					<Route index element={<Navigate replace to="home" />} />
 					<Route path="home" element={<Home />} />
-					<Route path="destination" element={<Destination />}>
+					<Route path="destination" element={<Destination planets={planets} />}>
 						<Route index element={<Navigate replace to={planets.at(0).url} />} />
 						{planets.map((p) => (
 							<Route key={p.url} path={p.url} element={<Planet planet={p} />} />
@@ -70,7 +69,7 @@ export default function App() {
 							</>
 						)} */}
 					</Route>
-					<Route path="crew" element={<Crew />}>
+					<Route path="crew" element={<Crew members={members} />}>
 						<Route index element={<Navigate replace to={members.at(0).url} />} />
 						{members.map((m) => (
 							<Route key={m.url} path={m.url} element={<Member member={m} />} />
@@ -81,8 +80,7 @@ export default function App() {
 						<Route path="victor-glover" element={<Member memberName="Mark Shuttleworth" />} />
 						<Route path="anousheh-ansari" element={<Member memberName="Anousheh Ansari" />} /> */}
 					</Route>
-
-					<Route path="technology" element={<Technology />}>
+					<Route path="technology" element={<Technology devices={devices} />}>
 						<Route index element={<Navigate replace to={devices.at(0).url} />} />
 						{devices.map((d) => (
 							<Route key={d.url} path={d.url} element={<Device device={d} />} />
