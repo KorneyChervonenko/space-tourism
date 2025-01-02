@@ -1,4 +1,14 @@
-.memberMenu {
+// .memberMenu {
+// 	display: flex;
+// 	flex-direction: row;
+// }
+
+.itemMenu {
 	display: flex;
 	flex-direction: row;
+	column-gap: 1rem;
+
+	> .item {
+		background-color: cadetblue;
+	}
 }
