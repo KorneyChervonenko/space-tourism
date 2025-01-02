@@ -1,19 +1,51 @@
-// import { useState } from 'react';
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
+// todo Destination=> Destinations ?
+
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import './App.scss';
 
 import Home from './pages/Home/Home.jsx';
 import Destination from './pages/Destination/Destination.jsx';
 import Crew from './pages/Crew/Crew.jsx';
-import Technology from './pages/Crew/Technology.jsx';
+import Technology from './pages/Technology/Technology.jsx';
 import PageNotFound from './pages/PageNotFound/PageNotFound.jsx';
 import PageNav from './components/PageNav/PageNav.jsx';
-import Planet from './components/PageNav/Planet/Planet.jsx';
+import Planet from './components/Planet/Planet.jsx';
+import Member from './components/Member/Member.jsx';
+import Device from './components/Device/Device.jsx';
+
+import slugify from './utils/slugify.mjs';
 
 export default function App() {
+	// console.clear();
+	const [{ planets, members, devices }, setData] = useState({}); // {} !!!!
+	const [isLoading, setIsLoading] = useState(true);
+
+	useEffect(() => {
+		async function fetchData() {
+			try {
+				setIsLoading(true);
+				const response = await fetch('../../src/assets/data/data.json');
+				const newData = await response.json();
+				// console.log(data);
+				const planets = newData.destinations.map((p) => ({ ...p, url: slugify(p.name) }));
+				const members = newData.crew.map((m) => ({ ...m, url: slugify(m.name) }));
+				const devices = newData.technology.map((d) => ({ ...d, url: slugify(d.name) }));
+				console.log(devices);
+				console.log(devices.at(0).url);
+
+				setData({ planets, members, devices });
+				// setCities(data);
+			} catch (err) {
+				alert(`error loading data ${err}`);
+			} finally {
+				setIsLoading(false);
+			}
+		}
+		fetchData();
+	}, []);
+
+	if (isLoading) return;
 	return (
 		<main>
 			<h1 className="visually-hidden">Space tourism</h1>
@@ -24,25 +56,39 @@ export default function App() {
 					<Route index element={<Navigate replace to="home" />} />
 					<Route path="home" element={<Home />} />
 					<Route path="destination" element={<Destination />}>
-						<Route index element={<Navigate replace to="moon" />} />
-						<Route path="moon" element={<Planet planetName="moon" />} />
-						<Route path="mars" element={<Planet planetName="mars" />} />
-						<Route path="europa" element={<Planet planetName="europa" />} />
-						<Route path="titan" element={<Planet planetName="titan" />} />
-					</Route>
-					<Route path="crew" element={<Crew />} />
-					<Route path="technology" element={<Technology />} />
+						<Route index element={<Navigate replace to={planets.at(0).url} />} />
+						{planets.map((p) => (
+							<Route key={p.url} path={p.url} element={<Planet planet={p} />} />
+						))}
 
-					{/* <Route path="app" element={<AppLayout />}>
-						<Route index element={<Navigate replace to="cities" />} />
-						<Route path="cities" element={<CityList cities={cities} isLoading={isLoading} />} />
-						<Route path="cities/:id" element={<City />} />
-						<Route
-							path="countries"
-							element={<CountryList cities={cities} isLoading={isLoading} />}
-						/>
-						<Route path="form" element={<Form />} />
-					</Route> */}
+						{/* {!isLoading && (
+							<>
+								<Route index element={<Navigate replace to={planets.at(0).url} />} />
+								{planets.map((p) => (
+									<Route key={p.url} path={p.url} element={<Planet planet={p} />} />
+								))}
+							</>
+						)} */}
+					</Route>
+					<Route path="crew" element={<Crew />}>
+						<Route index element={<Navigate replace to={members.at(0).url} />} />
+						{members.map((m) => (
+							<Route key={m.url} path={m.url} element={<Member member={m} />} />
+						))}
+
+						{/* <Route index element={<Navigate replace to="douglas-hurley" />} />
+						<Route path="douglas-hurley" element={<Member memberName="Douglas Hurley" />} />
+						<Route path="victor-glover" element={<Member memberName="Mark Shuttleworth" />} />
+						<Route path="anousheh-ansari" element={<Member memberName="Anousheh Ansari" />} /> */}
+					</Route>
+
+					<Route path="technology" element={<Technology />}>
+						<Route index element={<Navigate replace to={devices.at(0).url} />} />
+						{devices.map((d) => (
+							<Route key={d.url} path={d.url} element={<Device device={d} />} />
+						))}
+					</Route>
+
 					<Route path="*" element={<PageNotFound />} />
 				</Routes>
 			</BrowserRouter>
