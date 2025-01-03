@@ -1,16 +1,57 @@
-// .deviceMenu {
+// // .deviceMenu {
+// // 	display: flex;
+// // 	flex-direction: row;
+// // }
+
+// .itemMenu {
 // 	display: flex;
 // 	flex-direction: row;
+// 	column-gap: 1rem;
+
+// 	> .item {
+// 		background-color: rebeccapurple;
+// 		background-color: burlywood;
+// 		// color: white;
+// 	}
 // }
 
+@import '../../styles/_reset.scss';
+@import '../../styles/_helpers.scss';
+@import '../../styles/_vars.scss';
+
 .itemMenu {
+	background-color: crimson;
+	// margin-inline-start: 5rem;
 	display: flex;
 	flex-direction: row;
-	column-gap: 1rem;
+	column-gap: 2rem;
+
+	counter-reset: number;
 
 	> .item {
-		background-color: rebeccapurple;
-		background-color: burlywood;
-		// color: white;
+		background-color: cadetblue;
+		// block-size: 1rem;
+
+		> .pageLink {
+			counter-increment: number;
+			text-decoration: none;
+
+			color: white;
+			font-size: 0;
+
+			&::after {
+				font-size: 1rem;
+				content: counter(number);
+				@include circle(2rem);
+				background-color: blue;
+			}
+
+			&:global(.active) {
+				&::after {
+					background-color: white;
+					color: blue;
+				}
+			}
+		}
 	}
 }

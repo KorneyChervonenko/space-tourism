@@ -9,14 +9,11 @@
 	flex-direction: row;
 	column-gap: 2rem;
 
-	counter-reset: number;
-
 	> .item {
 		background-color: cadetblue;
 		// block-size: 1rem;
 
 		> .pageLink {
-			counter-increment: number;
 			text-decoration: none;
 
 			color: white;
@@ -24,8 +21,8 @@
 
 			&::after {
 				font-size: 1rem;
-				content: counter(number);
-				@include circle(2rem);
+				content: '';
+				@include circle(1rem);
 				background-color: blue;
 			}
 
