@@ -1,4 +1,4 @@
-// todo PlanetNav, MemberNav, TechNav => UniNav
+//
 
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -52,7 +52,7 @@ export default function App() {
 			<BrowserRouter>
 				<PageNav />
 				<Routes>
-					<Route index element={<Navigate replace to="crew" />} />
+					<Route index element={<Navigate replace to="home" />} />
 					<Route path="home" element={<Home />} />
 					<Route path="destination" element={<Destination planets={planets} />}>
 						<Route index element={<Navigate replace to={planets.at(0).url} />} />
