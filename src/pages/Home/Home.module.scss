@@ -6,39 +6,58 @@
 @use '../../styles/helpers';
 @use '../../styles/vars' as *;
 
-// .full-space {
-// 	inline-size: 100%;
-// 	block-size: 100vh;
-// }
-
-// $mobile-width: 23.4375rem;
-// $tablet-width: 48rem;
-// $desktop-width: 90rem;
-
 .homePage {
 	@extend .full-space;
 
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
 	// // mobile
-	@media screen and (max-width: $tablet-width) {
+	@media screen and (width < $tablet-width) {
 		background-color: blueviolet;
-		// background-image: url(../assets/crew/background-crew-mobile.jpg);
+		// background-image: url(../../assets/home/background-home-mobile.jpg);
+
 		// inline-size: @mobile-width;
 		// block-size: @mobile-height-short;
 	}
 
 	// tablet
-	@media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+	@media screen and ($tablet-width <= width < $desktop-width) {
 		background-color: coral;
-		// background-image: url(../assets/crew/background-crew-tablet.jpg);
+		// background-image: url(../../assets/home/background-home-tablet.jpg);
+
 		// inline-size: @tablet-width;
 		// block-size: @tablet-height;
 	}
 
 	// desktop
-	@media screen and (min-width: $desktop-width) {
+	@media screen and (width >= $desktop-width) {
 		background-color: yellow;
-		// background-image: url(../assets/crew/background-crew-desktop.jpg);
+		// background-image: url(../../assets/home/background-home-desktop.jpg);
+
 		// inline-size: @desktop-width;
 		// block-size: @desktop-height;
+	}
+
+	> .heading {
+		background-color: coral;
+		inline-size: fit-content;
+		font-family: 'Barlow Condensed', serif;
+		font-size: var(--fs-28);
+		font-weight: normal;
+		letter-spacing: 0.295rem;
+
+		> .headingBigWord {
+			font-family: 'Bellefair', serif;
+			font-size: var(--fs-150);
+			letter-spacing: 0;
+		}
+	}
+
+	> .promoText {
+		background-color: chartreuse;
+		inline-size: 27.8125rem;
+		font-family: 'Barlow', serif;
 	}
 }
