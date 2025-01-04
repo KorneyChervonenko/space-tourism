@@ -348,10 +348,25 @@ $desktop-width: 90rem;
 	--fs-12: 0.75rem; // 12px
 	--fs-10: 0.625rem; // 10px
 
+	--min-mobile-height: 41.6875rem;
+	--min-tablet-height: 64rem;
+	--min-desktop-height: 56.25rem;
 	// --border-radius-mobile: 0.75rem;
 	// --border-radius-desktop: 0.875rem;
 }
 
 // button:where(:hover, :focus) {
 // 	cursor: pointer;
+// }
+
+// // mobile
+// @media screen and (width < $tablet-width) {
+// }
+
+// // tablet
+// @media screen and ($tablet-width <= width < $desktop-width) {
+// }
+
+// // desktop
+// @media screen and (width >= $desktop-width) {
 // }
