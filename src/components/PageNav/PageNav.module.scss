@@ -1,7 +1,9 @@
 .mainMenu {
 	position: absolute;
 	top: 1rem;
-	left: 50%;
+	right: 0;
+	// left: 50%;
+	// transform: translateX(-50%);
 
 	display: flex;
 	flex-direction: row;

@@ -72,14 +72,14 @@
 		min-block-size: var(--min-desktop-height);
 
 		display: grid;
-		grid-template-rows: repeat(2, 1fr);
+		grid-template-rows: repeat(2, auto);
 		grid-template-columns: repeat(2, 1fr);
 		// align-items: center;
 		justify-items: center;
 		// align-items: flex-end;
 	}
 
-	> .promo {
+	& > .promo {
 		display: flex;
 		flex-direction: column;
 
@@ -102,7 +102,7 @@
 			// align-self: flex-start;
 		}
 
-		> .heading {
+		& > .heading {
 			// background-color: coral;
 			background-color: rebeccapurple;
 			inline-size: fit-content;
@@ -112,14 +112,14 @@
 			font-weight: normal;
 			letter-spacing: var(--heading-letter-spacing);
 
-			> .headingBigWord {
+			& > .headingBigWord {
 				font-family: 'Bellefair', serif;
 				font-size: var(--heading-bigword-fs);
 				letter-spacing: 0;
 			}
 		}
 
-		> .promoText {
+		& > .promoText {
 			// desktop
 			@media screen and (width >= $desktop-width) {
 			}
@@ -134,7 +134,7 @@
 		}
 	}
 
-	> .exploreBtn {
+	& > .exploreBtn {
 		// desktop
 		@media screen and (width >= $desktop-width) {
 			grid-row: 2 / 3;
