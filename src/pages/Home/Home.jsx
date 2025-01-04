@@ -1,10 +1,11 @@
 import { useNavigate } from 'react-router-dom';
+import styles from './Home.module.scss';
 
 export default function Homepage() {
 	const navigate = useNavigate();
 
 	return (
-		<section className="homePage">
+		<section className={styles.homePage}>
 			{/* <h2>Homepage</h2> */}
 			<h2 className="heading">
 				SO, YOU WANT TO TRAVEL TO <br />

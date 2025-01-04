@@ -15,9 +15,13 @@
 // 	}
 // }
 
-@import '../../styles/_reset.scss';
-@import '../../styles/_helpers.scss';
-@import '../../styles/_vars.scss';
+// @import '../../styles/_reset.scss';
+// @import '../../styles/_helpers.scss';
+// @import '../../styles/_vars.scss';
+
+@use '../../styles/reset';
+@use '../../styles/helpers';
+@use '../../styles/vars';
 
 .itemMenu {
 	background-color: crimson;
@@ -42,7 +46,7 @@
 			&::after {
 				font-size: 1rem;
 				content: counter(number);
-				@include circle(2rem);
+				@include helpers.circle(2rem);
 				background-color: blue;
 			}
 

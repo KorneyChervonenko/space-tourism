@@ -47,7 +47,7 @@ export default function App() {
 
 	if (isLoading) return;
 	return (
-		<main>
+		<main className="main">
 			<h1 className="visually-hidden">Space tourism</h1>
 			<BrowserRouter>
 				<PageNav />

@@ -155,13 +155,25 @@
 	}
 }
 
-$mobile-width: 23.44rem;
-// $mobile-min-height: 42rem;
-// $desktop-width: 59rem;
-// $desktop-height: 37.5rem;
-// $main-width-mobile: 20.5rem;
-// $main-width-desktop: 37.5rem;
-$threshold-width: 70rem;
+:root {
+	// $mobile-width: 23.4375rem;
+	// $tablet-width: 48rem;
+	// $desktop-width: 90rem;
+	// $threshold-width: 70rem;
+
+	// // $some-color: red;
+	// --some-color: yellow;
+
+	// --mobile-width: 23.4375rem;
+	// --tablet-width: 48rem;
+	// --desktop-width: 90rem;
+}
+
+$mobile-width: 23.4375rem;
+$tablet-width: 48rem;
+$desktop-width: 90rem;
+
+// $threshold-width: 70rem;
 // @max-width-desktop: 90rem;
 
 :root {

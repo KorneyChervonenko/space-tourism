@@ -1,6 +1,9 @@
-@import '../../styles/_reset.scss';
-@import '../../styles/_helpers.scss';
-@import '../../styles/_vars.scss';
+// @import '../../styles/_reset.scss';
+// @import '../../styles/_helpers.scss';
+// @import '../../styles/_vars.scss';
+@use '../../styles/reset';
+@use '../../styles/helpers';
+@use '../../styles/vars';
 
 .itemMenu {
 	background-color: crimson;
@@ -22,7 +25,7 @@
 			&::after {
 				font-size: 1rem;
 				content: '';
-				@include circle(1rem);
+				@include helpers.circle(1rem);
 				background-color: blue;
 			}
 

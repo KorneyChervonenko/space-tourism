@@ -1,0 +1,44 @@
+// @use '../../styles/_reset.scss';
+// @use '../../styles/_helpers.scss';
+// @use '../../styles/_scss';
+
+@use '../../styles/reset';
+@use '../../styles/helpers';
+@use '../../styles/vars' as *;
+
+// .full-space {
+// 	inline-size: 100%;
+// 	block-size: 100vh;
+// }
+
+// $mobile-width: 23.4375rem;
+// $tablet-width: 48rem;
+// $desktop-width: 90rem;
+
+.homePage {
+	@extend .full-space;
+
+	// // mobile
+	@media screen and (max-width: $tablet-width) {
+		background-color: blueviolet;
+		// background-image: url(../assets/crew/background-crew-mobile.jpg);
+		// inline-size: @mobile-width;
+		// block-size: @mobile-height-short;
+	}
+
+	// tablet
+	@media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
+		background-color: coral;
+		// background-image: url(../assets/crew/background-crew-tablet.jpg);
+		// inline-size: @tablet-width;
+		// block-size: @tablet-height;
+	}
+
+	// desktop
+	@media screen and (min-width: $desktop-width) {
+		background-color: yellow;
+		// background-image: url(../assets/crew/background-crew-desktop.jpg);
+		// inline-size: @desktop-width;
+		// block-size: @desktop-height;
+	}
+}

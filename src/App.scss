@@ -4,3 +4,9 @@
 @use './styles/_reset.scss';
 @use './styles/_helpers.scss';
 @use './styles/_vars.scss';
+
+.main {
+	@extend .full-space;
+	background-color: cadetblue;
+	position: relative;
+}

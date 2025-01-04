@@ -9,7 +9,7 @@
 
 .full-space {
 	inline-size: 100%;
-	block-size: 100%;
+	block-size: 100vh;
 }
 
 @mixin flex-block($width: auto, $height: auto, $radius: 0) {
