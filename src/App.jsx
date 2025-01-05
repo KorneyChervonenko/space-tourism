@@ -31,8 +31,8 @@ export default function App() {
 				const planets = newData.destinations.map((p) => ({ ...p, url: slugify(p.name) }));
 				const members = newData.crew.map((m) => ({ ...m, url: slugify(m.name) }));
 				const devices = newData.technology.map((d) => ({ ...d, url: slugify(d.name) }));
-				console.log(devices);
-				console.log(devices.at(0).url);
+				// console.log(devices);
+				// console.log(devices.at(0).url);
 
 				setData({ planets, members, devices });
 				// setCities(data);
