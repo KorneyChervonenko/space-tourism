@@ -29,6 +29,7 @@
 
 	& {
 		position: absolute;
+		z-index: 3;
 		// top: 1rem;
 		top: var(--top-offset);
 		right: 0;

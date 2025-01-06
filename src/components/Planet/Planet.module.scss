@@ -1,0 +1,58 @@
+@use '../../styles/reset';
+@use '../../styles/helpers';
+@use '../../styles/vars' as *;
+
+.planet {
+	background-color: green;
+	inline-size: 100%;
+	block-size: 20rem;
+
+	// // mobile
+	@media screen and (width < $tablet-width) {
+		--img-size: 10.625rem;
+		--heading-fs: var(--fs-56);
+		--description-fs: var(--fs-15);
+		--description-line-height: 1.5625rem;
+		--description-width: 20.4375rem;
+	}
+
+	// tablet
+	@media screen and ($tablet-width <= width < $desktop-width) {
+		--img-size: 18.75rem;
+		--heading-fs: var(--fs-80);
+		--description-fs: var(--fs-16);
+		--description-line-height: 1.75;
+		--description-width: 35.8125rem;
+	}
+
+	// desktop
+	@media screen and (width >= $desktop-width) {
+		--img-size: 27.8125rem;
+		--heading-fs: var(--fs-100);
+		--description-fs: var(--fs-18);
+		--description-line-height: 2rem;
+		--description-width: 27.75rem;
+
+		// display: grid;
+		// grid-template-rows: repeat(2, auto);
+		// grid-template-columns: repeat(2, 1fr);
+	}
+
+	.planetImage {
+		inline-size: var(--img-size);
+	}
+
+	.planetName {
+		text-transform: uppercase;
+		font-family: 'Bellefair', serif;
+		font-size: var(--heading-fs);
+		font-weight: normal;
+	}
+
+	.planetDescription {
+		inline-size: var(--description-width);
+		font-family: 'Barlow', serif;
+		font-size: var(--description-fs);
+		line-height: var(--description-line-height);
+	}
+}

@@ -18,14 +18,40 @@
 // @import '../../styles/_vars.scss';
 @use '../../styles/reset';
 @use '../../styles/helpers';
-@use '../../styles/vars';
+@use '../../styles/vars' as *;
 
 .itemMenu {
 	background-color: crimson;
 	// margin-inline-start: 5rem;
+	font-family: 'Barlow Condensed', serif;
+	// // mobile
+	@media screen and (width < $tablet-width) {
+		--link-fs: var(--fs-14);
+		--menu-width: 14.84375rem;
+		--menu-height: 1.75rem;
+	}
+
+	// tablet
+	@media screen and ($tablet-width <= width < $desktop-width) {
+		--link-fs: var(--fs-16);
+		--menu-width: 17.84375rem;
+		--menu-height: 2rem;
+	}
+
+	// desktop
+	@media screen and (width >= $desktop-width) {
+		--link-fs: var(--fs-16);
+		--menu-width: 17.84375rem;
+		--menu-height: 2rem;
+	}
+
+	inline-size: var(--menu-width);
+	block-size: var(--menu-height);
+
 	display: flex;
 	flex-direction: row;
-	column-gap: 2rem;
+	// column-gap: 2rem;
+	justify-content: space-between;
 
 	> .item {
 		background-color: cadetblue;
@@ -33,12 +59,18 @@
 
 		> .pageLink {
 			text-decoration: none;
-
+			text-transform: uppercase;
+			font-size: var(--link-fs);
 			color: white;
 			// font-size: 0;
-			&:global(.active) {
-				background-color: coral;
-			}
+			// &:global(.active) {
+			// 	background-color: coral;
+			// }
+		}
+
+		&:has(.pageLink:global(.active)) {
+			border-block-end-style: solid;
+			border-block-end-width: 0.3rem;
 		}
 	}
 }
