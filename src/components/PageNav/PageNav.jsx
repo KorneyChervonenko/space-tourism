@@ -8,16 +8,24 @@ export default function PageNav() {
 			<h2 className="visually-hidden">Page Navigation</h2>
 			<ol start="0" role="menu" className={styles.horizontalMenu}>
 				<li>
-					<NavLink to="/home">Home</NavLink>
+					<NavLink to="/home" className={styles.pageLink}>
+						HOME
+					</NavLink>
 				</li>
 				<li>
-					<NavLink to="/destination">Destination</NavLink>
+					<NavLink to="/destination" className={styles.pageLink}>
+						DESTINATION
+					</NavLink>
 				</li>
 				<li>
-					<NavLink to="/crew">Crew</NavLink>
+					<NavLink to="/crew" className={styles.pageLink}>
+						CREW
+					</NavLink>
 				</li>
 				<li>
-					<NavLink to="/technology">Technology</NavLink>
+					<NavLink to="/technology" className={styles.pageLink}>
+						TECHNOLOGY
+					</NavLink>
 				</li>
 			</ol>
 
@@ -27,16 +35,24 @@ export default function PageNav() {
 				</summary>
 				<ol start="0" role="menu" className={styles.verticalMenu}>
 					<li>
-						<NavLink to="/home">Home</NavLink>
+						<NavLink to="/home" className={styles.pageLink}>
+							HOME
+						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/destination">Destination</NavLink>
+						<NavLink to="/destination" className={styles.pageLink}>
+							DESTINATION
+						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/crew">Crew</NavLink>
+						<NavLink to="/crew" className={styles.pageLink}>
+							CREW
+						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/technology">Technology</NavLink>
+						<NavLink to="/technology" className={styles.pageLink}>
+							TECHNOLOGY
+						</NavLink>
 					</li>
 				</ol>
 			</details>
