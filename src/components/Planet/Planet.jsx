@@ -18,8 +18,6 @@ export default function Planet({ planet }) {
 				<source srcSet={imgWebp} type="image/webp" />
 				<img src={imgPng} alt={planet.name} />
 			</picture>
-			{/* <img src={imgWebp} alt="" /> */}
-			{/* <img src="../src/assets/destination/image-moon.png" alt="" /> */}
 			<h3 className={styles.planetName}>{planet.name}</h3>
 			<div className={styles.planetDescription}>
 				{planet.description}

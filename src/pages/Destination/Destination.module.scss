@@ -4,6 +4,9 @@
 
 .destinationPage {
 	@extend .full-space;
+	// inline-size: 100%;
+	// block-size: 100vh;
+	// min-block-size: 100vh;
 
 	position: relative;
 
@@ -46,6 +49,7 @@
 		// --explore-btn-fs: var(--fs-32);
 
 		// min-block-size: var(--min-tablet-height);
+		// padding-block-end: 5rem;
 
 		// display: flex;
 		// flex-direction: column;
@@ -79,11 +83,34 @@
 
 	& > .planetMenu {
 		position: absolute;
-		left: 50%;
-		top: 30%;
+
+		// mobile
+		@media screen and (width < $tablet-width) {
+			// top: 50%;
+			top: 20.8rem;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		// tablet
+		@media screen and ($tablet-width <= width < $desktop-width) {
+			top: 35rem;
+			// top: max(22%, 35rem);
+			// top: max(55%, 30rem);
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		// desktop
+		@media screen and (width >= $desktop-width) {
+			left: 50%;
+			// top: 20%;
+			// top: max(22%, 8rem);
+			top: 19rem;
+		}
 	}
 
-	> .heading {
+	& > .heading {
 		font-family: 'Barlow Condensed', serif;
 		font-size: var(--heading-fs);
 		letter-spacing: var(--heading-letter-spacing);
@@ -91,6 +118,30 @@
 
 		> .headingNum {
 			font-weight: bold;
+		}
+
+		position: absolute;
+
+		// mobile
+		@media screen and (width < $tablet-width) {
+			// left: 4.8125rem;
+			top: 5.5rem;
+			// left: 50%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		// tablet
+		@media screen and ($tablet-width <= width < $desktop-width) {
+			left: 2.375rem;
+			top: 8.625rem;
+			// left: 50%;
+		}
+
+		// desktop
+		@media screen and (width >= $desktop-width) {
+			left: 10rem;
+			top: 13.375rem;
 		}
 	}
 }
