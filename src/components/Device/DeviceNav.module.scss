@@ -27,14 +27,16 @@
 	background-color: crimson;
 	// margin-inline-start: 5rem;
 	display: flex;
-	flex-direction: row;
-	column-gap: 2rem;
+	flex-direction: column;
+	// column-gap: 2rem;
+	row-gap: 2rem;
 
 	counter-reset: number;
 
 	> .item {
 		background-color: cadetblue;
-		// block-size: 1rem;
+		// block-size: 2rem;
+		inline-size: 0;
 
 		> .pageLink {
 			counter-increment: number;

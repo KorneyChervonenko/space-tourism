@@ -52,7 +52,7 @@ export default function App() {
 			<BrowserRouter>
 				<PageNav />
 				<Routes>
-					<Route index element={<Navigate replace to="crew" />} />
+					<Route index element={<Navigate replace to="technology" />} />
 					<Route path="home" element={<Home />} />
 					<Route path="destination" element={<Destination planets={planets} />}>
 						<Route index element={<Navigate replace to={planets.at(0).url} />} />

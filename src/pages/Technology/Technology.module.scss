@@ -1,0 +1,147 @@
+@use '../../styles/reset';
+@use '../../styles/helpers';
+@use '../../styles/vars' as *;
+
+.technologyPage {
+	@extend .full-space;
+	// inline-size: 100%;
+	// block-size: 100vh;
+	// min-block-size: 100vh;
+
+	position: relative;
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	// // mobile
+	@media screen and (width < $tablet-width) {
+		background-color: blueviolet;
+		// background-image: url(../../assets/home/background-home-mobile.jpg);
+		--heading-fs: var(--fs-16);
+		// --heading-bigword-fs: var(--fs-80);
+		--heading-letter-spacing: 0.16875rem;
+		// --promo-fs: var(--fs-15);
+		// --promo-lineheight: 1.5625rem;
+		// --promo-width: 20.4375rem;
+		// --explore-btn-dia: 9.375rem;
+		// --explore-btn-fs: var(--fs-20);
+
+		// min-block-size: var(--min-mobile-height);
+
+		// display: flex;
+		// flex-direction: column;
+		// align-items: center;
+		// justify-content: space-evenly;
+	}
+
+	// tablet
+	@media screen and ($tablet-width <= width < $desktop-width) {
+		background-color: coral;
+		// background-image: url(../../assets/home/background-home-tablet.jpg);
+		--heading-fs: var(--fs-20);
+		// --heading-bigword-fs: var(--fs-150);
+		--heading-letter-spacing: 0.21125rem;
+		// --promo-fs: var(--fs-16);
+		// --promo-lineheight: 1.75rem;
+		// --promo-width: 27.75rem;
+		// --explore-btn-dia: 15.125rem;
+		// --explore-btn-fs: var(--fs-32);
+
+		// min-block-size: var(--min-tablet-height);
+		// padding-block-end: 5rem;
+
+		// display: flex;
+		// flex-direction: column;
+		// align-items: center;
+		// justify-content: space-evenly;
+	}
+
+	// desktop
+	@media screen and (width >= $desktop-width) {
+		background-color: yellow;
+		// background-image: url(../../assets/home/background-home-desktop.jpg);
+
+		--heading-fs: var(--fs-28);
+		// --heading-bigword-fs: var(--fs-150);
+		--heading-letter-spacing: 0.295rem;
+		// --promo-fs: var(--fs-18);
+		// --promo-lineheight: 2rem;
+		// --promo-width: 27.75rem;
+		// --explore-btn-dia: 17.125rem;
+		// --explore-btn-fs: var(--fs-32);
+
+		// min-block-size: var(--min-desktop-height);
+
+		// display: grid;
+		// grid-template-rows: repeat(2, auto);
+		// grid-template-columns: repeat(2, 1fr);
+		// // align-items: center;
+		// justify-items: center;
+		// // align-items: flex-end;
+	}
+
+	& > .deviceMenu {
+		position: absolute;
+
+		// mobile
+		@media screen and (width < $tablet-width) {
+			// top: 50%;
+			top: 23.5rem;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		// tablet
+		@media screen and ($tablet-width <= width < $desktop-width) {
+			top: 25rem;
+			// top: max(22%, 35rem);
+			// top: max(55%, 30rem);
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		// desktop
+		@media screen and (width >= $desktop-width) {
+			// left: 50%;
+			// top: 20%;
+			// top: max(22%, 8rem);
+			left: 10rem;
+			// top: 19rem;
+			bottom: 15rem;
+		}
+	}
+
+	& > .heading {
+		font-family: 'Barlow Condensed', serif;
+		font-size: var(--heading-fs);
+		letter-spacing: var(--heading-letter-spacing);
+		font-weight: normal;
+
+		> .headingNum {
+			font-weight: bold;
+		}
+
+		position: absolute;
+
+		// mobile
+		@media screen and (width < $tablet-width) {
+			// left: 4.8125rem;
+			top: 5.5rem;
+			// left: 50%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		// tablet
+		@media screen and ($tablet-width <= width < $desktop-width) {
+			left: 2.375rem;
+			top: 8.625rem;
+			// left: 50%;
+		}
+
+		// desktop
+		@media screen and (width >= $desktop-width) {
+		}
+	}
+}
