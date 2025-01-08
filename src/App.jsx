@@ -52,22 +52,13 @@ export default function App() {
 			<BrowserRouter>
 				<PageNav />
 				<Routes>
-					<Route index element={<Navigate replace to="destination" />} />
+					<Route index element={<Navigate replace to="crew" />} />
 					<Route path="home" element={<Home />} />
 					<Route path="destination" element={<Destination planets={planets} />}>
-						<Route index element={<Navigate replace to={planets.at(1).url} />} />
+						<Route index element={<Navigate replace to={planets.at(0).url} />} />
 						{planets.map((p) => (
 							<Route key={p.url} path={p.url} element={<Planet planet={p} />} />
 						))}
-
-						{/* {!isLoading && (
-							<>
-								<Route index element={<Navigate replace to={planets.at(0).url} />} />
-								{planets.map((p) => (
-									<Route key={p.url} path={p.url} element={<Planet planet={p} />} />
-								))}
-							</>
-						)} */}
 					</Route>
 					<Route path="crew" element={<Crew members={members} />}>
 						<Route index element={<Navigate replace to={members.at(0).url} />} />

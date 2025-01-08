@@ -3,7 +3,7 @@
 // @import '../../styles/_vars.scss';
 @use '../../styles/reset';
 @use '../../styles/helpers';
-@use '../../styles/vars';
+@use '../../styles/vars' as *;
 
 .itemMenu {
 	background-color: crimson;
@@ -15,15 +15,17 @@
 	> .item {
 		background-color: cadetblue;
 		// block-size: 1rem;
+		block-size: 0;
 
 		> .pageLink {
 			text-decoration: none;
 
-			color: white;
+			// color: white;
 			font-size: 0;
 
 			&::after {
-				font-size: 1rem;
+				// font-size: 1rem;
+				// font-size: 0;
 				content: '';
 				@include helpers.circle(1rem);
 				background-color: blue;
@@ -32,7 +34,7 @@
 			&:global(.active) {
 				&::after {
 					background-color: white;
-					color: blue;
+					// color: blue;
 				}
 			}
 		}
