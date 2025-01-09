@@ -311,14 +311,19 @@
 	// --mobile-width: 23.4375rem;
 	// --tablet-width: 48rem;
 	// --desktop-width: 90rem;
+	// --desktop-width: #{$desktop-width};
 }
 
 $mobile-width: 23.4375rem;
 $tablet-width: 48rem;
 $desktop-width: 90rem;
 
+// --desktop-width: #{$desktop-width};
 // $threshold-width: 70rem;
 // @max-width-desktop: 90rem;
+:root {
+	--desktop-width: #{$desktop-width};
+}
 
 :root {
 	font-family: serif;

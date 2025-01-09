@@ -21,22 +21,52 @@
 
 @use '../../styles/reset';
 @use '../../styles/helpers';
-@use '../../styles/vars';
+@use '../../styles/vars' as *;
 
 .itemMenu {
 	background-color: crimson;
 	// margin-inline-start: 5rem;
 	display: flex;
-	flex-direction: column;
 	// column-gap: 2rem;
-	row-gap: 2rem;
+
+	// mobile
+	@media screen and (width < $tablet-width) {
+		flex-direction: row;
+		column-gap: 2rem;
+	}
+
+	// tablet
+	@media screen and ($tablet-width <= width < $desktop-width) {
+		flex-direction: row;
+		column-gap: 2rem;
+	}
+
+	// desktop
+	@media screen and (width >= $desktop-width) {
+		flex-direction: column;
+		row-gap: 2rem;
+	}
 
 	counter-reset: number;
 
 	> .item {
 		background-color: cadetblue;
-		// block-size: 2rem;
-		inline-size: 0;
+
+		// inline-size: 0;
+		// mobile
+		@media screen and (width < $tablet-width) {
+			block-size: 0;
+		}
+
+		// tablet
+		@media screen and ($tablet-width <= width < $desktop-width) {
+			block-size: 0;
+		}
+
+		// desktop
+		@media screen and (width >= $desktop-width) {
+			inline-size: 0;
+		}
 
 		> .pageLink {
 			counter-increment: number;

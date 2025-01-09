@@ -86,15 +86,16 @@
 
 		// mobile
 		@media screen and (width < $tablet-width) {
-			// top: 50%;
-			top: 23.5rem;
+			top: 50%;
+			// top: 23.5rem;
 			left: 50%;
 			transform: translateX(-50%);
 		}
 
 		// tablet
 		@media screen and ($tablet-width <= width < $desktop-width) {
-			top: 25rem;
+			// top: 25rem;
+			top: 50%;
 			// top: max(22%, 35rem);
 			// top: max(55%, 30rem);
 			left: 50%;
