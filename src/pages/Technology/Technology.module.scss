@@ -86,16 +86,17 @@
 
 		// mobile
 		@media screen and (width < $tablet-width) {
-			top: 50%;
-			// top: 23.5rem;
+			// top: 50%;
+			// top: 21.3125rem;
+			top: 19rem;
 			left: 50%;
 			transform: translateX(-50%);
 		}
 
 		// tablet
 		@media screen and ($tablet-width <= width < $desktop-width) {
-			// top: 25rem;
-			top: 50%;
+			top: 36.4375rem;
+			// top: 50%;
 			// top: max(22%, 35rem);
 			// top: max(55%, 30rem);
 			left: 50%;
@@ -105,11 +106,12 @@
 		// desktop
 		@media screen and (width >= $desktop-width) {
 			// left: 50%;
-			// top: 20%;
+			top: 50%;
+			transform: translateY(-50%);
 			// top: max(22%, 8rem);
 			left: 10rem;
 			// top: 19rem;
-			bottom: 15rem;
+			// bottom: 15rem;
 		}
 	}
 
@@ -143,6 +145,8 @@
 
 		// desktop
 		@media screen and (width >= $desktop-width) {
+			left: 10rem;
+			top: 13.375rem;
 		}
 	}
 }
