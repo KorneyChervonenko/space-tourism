@@ -3,7 +3,8 @@
 @use '../../styles/vars' as *;
 
 .planet {
-	background-color: green;
+	// background-color: green;
+	color: white;
 
 	@extend .full-space;
 	// inline-size: 100%;
@@ -160,24 +161,45 @@
 		}
 
 		& > .table {
-			background-color: aquamarine;
+			// background-color: aquamarine;
+
 			display: flex;
 
 			// mobile
 			@media screen and (width < $tablet-width) {
 				flex-direction: column;
+				row-gap: 1.5rem;
 			}
 
 			// tablet
 			@media screen and ($tablet-width <= width < $desktop-width) {
 				flex-direction: row;
-				justify-content: space-evenly;
+				// justify-content: space-evenly;
+				justify-content: center;
+				column-gap: 6.25rem;
 			}
 
 			// desktop
 			@media screen and (width >= $desktop-width) {
 				flex-direction: row;
 				column-gap: 4rem;
+			}
+
+			.tableHeader {
+				// background-color: rebeccapurple;
+				font-family: 'Barlow Condensed', serif;
+				font-style: normal;
+				font-weight: normal;
+				font-size: var(--fs-14);
+				letter-spacing: 0.1475rem;
+			}
+
+			.tableValue {
+				// background-color: cadetblue;
+				font-family: 'Bellefair', serif;
+				font-style: normal;
+				font-weight: normal;
+				font-size: var(--fs-28);
 			}
 		}
 	}

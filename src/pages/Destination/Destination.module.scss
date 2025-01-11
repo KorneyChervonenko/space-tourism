@@ -4,6 +4,7 @@
 
 .destinationPage {
 	@extend .full-space;
+	color: white;
 	// inline-size: 100%;
 	// block-size: 100vh;
 	// min-block-size: 100vh;
@@ -16,8 +17,8 @@
 
 	// // mobile
 	@media screen and (width < $tablet-width) {
-		background-color: blueviolet;
-		// background-image: url(../../assets/home/background-home-mobile.jpg);
+		// background-color: blueviolet;
+		background-image: url(../../assets/destination/background-destination-mobile.jpg);
 		--heading-fs: var(--fs-16);
 		// --heading-bigword-fs: var(--fs-80);
 		--heading-letter-spacing: 0.16875rem;
@@ -37,8 +38,8 @@
 
 	// tablet
 	@media screen and ($tablet-width <= width < $desktop-width) {
-		background-color: coral;
-		// background-image: url(../../assets/home/background-home-tablet.jpg);
+		// background-color: coral;
+		background-image: url(../../assets/destination/background-destination-tablet.jpg);
 		--heading-fs: var(--fs-20);
 		// --heading-bigword-fs: var(--fs-150);
 		--heading-letter-spacing: 0.21125rem;
@@ -59,8 +60,8 @@
 
 	// desktop
 	@media screen and (width >= $desktop-width) {
-		background-color: yellow;
-		// background-image: url(../../assets/home/background-home-desktop.jpg);
+		// background-color: yellow;
+		background-image: url(../../assets/destination/background-destination-desktop.jpg);
 
 		--heading-fs: var(--fs-28);
 		// --heading-bigword-fs: var(--fs-150);
@@ -118,6 +119,7 @@
 
 		> .headingNum {
 			font-weight: bold;
+			color: var(--color-grey);
 		}
 
 		position: absolute;

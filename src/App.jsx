@@ -18,7 +18,7 @@ import slugify from './utils/slugify.mjs';
 
 export default function App() {
 	// console.clear();
-	const [{ planets, members, devices }, setData] = useState({}); // {} !!!!
+	const [{ planets, members, devices }, setData] = useState({});
 	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
@@ -53,24 +53,23 @@ export default function App() {
 				<PageNav />
 				<Routes>
 					<Route index element={<Navigate replace to="technology" />} />
+					
 					<Route path="home" element={<Home />} />
+
 					<Route path="destination" element={<Destination planets={planets} />}>
 						<Route index element={<Navigate replace to={planets.at(0).url} />} />
 						{planets.map((p) => (
 							<Route key={p.url} path={p.url} element={<Planet planet={p} />} />
 						))}
 					</Route>
+
 					<Route path="crew" element={<Crew members={members} />}>
 						<Route index element={<Navigate replace to={members.at(0).url} />} />
 						{members.map((m) => (
 							<Route key={m.url} path={m.url} element={<Member member={m} />} />
 						))}
-
-						{/* <Route index element={<Navigate replace to="douglas-hurley" />} />
-						<Route path="douglas-hurley" element={<Member memberName="Douglas Hurley" />} />
-						<Route path="victor-glover" element={<Member memberName="Mark Shuttleworth" />} />
-						<Route path="anousheh-ansari" element={<Member memberName="Anousheh Ansari" />} /> */}
 					</Route>
+
 					<Route path="technology" element={<Technology devices={devices} />}>
 						<Route index element={<Navigate replace to={devices.at(0).url} />} />
 						{devices.map((d) => (

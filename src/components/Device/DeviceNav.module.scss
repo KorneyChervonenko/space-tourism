@@ -32,13 +32,13 @@
 	// mobile
 	@media screen and (width < $tablet-width) {
 		flex-direction: row;
-		column-gap: 2rem;
+		column-gap: 1rem;
 	}
 
 	// tablet
 	@media screen and ($tablet-width <= width < $desktop-width) {
 		flex-direction: row;
-		column-gap: 2rem;
+		column-gap: 1rem;
 	}
 
 	// desktop
@@ -56,16 +56,22 @@
 		// mobile
 		@media screen and (width < $tablet-width) {
 			block-size: 0;
+			--circle-dia: 2.5rem;
+			--digit-fs: var(--fs-16);
 		}
 
 		// tablet
 		@media screen and ($tablet-width <= width < $desktop-width) {
 			block-size: 0;
+			--circle-dia: 3.75rem;
+			--digit-fs: var(--fs-24);
 		}
 
 		// desktop
 		@media screen and (width >= $desktop-width) {
 			inline-size: 0;
+			--circle-dia: 5rem;
+			--digit-fs: var(--fs-32);
 		}
 
 		> .pageLink {
@@ -76,15 +82,21 @@
 			font-size: 0;
 
 			&::after {
-				font-size: 1rem;
+				font-size: var(--digit-fs);
+				font-family: 'Bellefair', serif;
+				font-weight: normal;
 				content: counter(number);
-				@include helpers.circle(2rem);
-				background-color: blue;
+				@include helpers.circle(var(--circle-dia));
+				// background-color: blue;
+				// outline-style: solid;
+				border-style: solid;
+				border-color: var(--color-grey);
 			}
 
 			&:global(.active) {
 				&::after {
 					background-color: white;
+					border-color: white;
 					color: blue;
 				}
 			}

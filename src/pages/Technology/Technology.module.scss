@@ -7,7 +7,7 @@
 	// inline-size: 100%;
 	// block-size: 100vh;
 	// min-block-size: 100vh;
-
+	color: white;
 	position: relative;
 
 	background-repeat: no-repeat;
@@ -16,8 +16,8 @@
 
 	// // mobile
 	@media screen and (width < $tablet-width) {
-		background-color: blueviolet;
-		// background-image: url(../../assets/home/background-home-mobile.jpg);
+		// background-color: blueviolet;
+		background-image: url(../../assets/technology/background-technology-mobile.jpg);
 		--heading-fs: var(--fs-16);
 		// --heading-bigword-fs: var(--fs-80);
 		--heading-letter-spacing: 0.16875rem;
@@ -37,8 +37,8 @@
 
 	// tablet
 	@media screen and ($tablet-width <= width < $desktop-width) {
-		background-color: coral;
-		// background-image: url(../../assets/home/background-home-tablet.jpg);
+		// background-color: coral;
+		background-image: url(../../assets/technology/background-technology-tablet.jpg);
 		--heading-fs: var(--fs-20);
 		// --heading-bigword-fs: var(--fs-150);
 		--heading-letter-spacing: 0.21125rem;
@@ -59,8 +59,8 @@
 
 	// desktop
 	@media screen and (width >= $desktop-width) {
-		background-color: yellow;
-		// background-image: url(../../assets/home/background-home-desktop.jpg);
+		// background-color: yellow;
+		background-image: url(../../assets/technology/background-technology-desktop.jpg);
 
 		--heading-fs: var(--fs-28);
 		// --heading-bigword-fs: var(--fs-150);
@@ -123,6 +123,7 @@
 
 		> .headingNum {
 			font-weight: bold;
+			color: var(--color-grey);
 		}
 
 		position: absolute;

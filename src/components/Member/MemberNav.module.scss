@@ -10,7 +10,7 @@
 	// margin-inline-start: 5rem;
 	display: flex;
 	flex-direction: row;
-	column-gap: 2rem;
+	column-gap: 1rem;
 
 	> .item {
 		background-color: cadetblue;
@@ -18,8 +18,22 @@
 		block-size: 0;
 
 		> .pageLink {
-			text-decoration: none;
+			// mobile
+			@media screen and (width < $tablet-width) {
+				--circle-dia: 0.625rem;
+			}
 
+			// tablet
+			@media screen and ($tablet-width <= width < $desktop-width) {
+				--circle-dia: 0.625rem;
+			}
+
+			// desktop
+			@media screen and (width >= $desktop-width) {
+				--circle-dia: 0.9375rem;
+			}
+
+			text-decoration: none;
 			// color: white;
 			font-size: 0;
 
@@ -27,8 +41,8 @@
 				// font-size: 1rem;
 				// font-size: 0;
 				content: '';
-				@include helpers.circle(1rem);
-				background-color: blue;
+				@include helpers.circle(var(--circle-dia));
+				background-color: var(--color-grey);
 			}
 
 			&:global(.active) {

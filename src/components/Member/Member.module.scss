@@ -3,12 +3,13 @@
 @use '../../styles/vars' as *;
 
 .member {
-	background-color: green;
+	// background-color: green;
 
 	@extend .full-space;
 	// inline-size: 100%;
 	// min-block-size: 90vh;
 	// block-size: 100%;
+	color: white;
 
 	// mobile
 	@media screen and (width < $tablet-width) {

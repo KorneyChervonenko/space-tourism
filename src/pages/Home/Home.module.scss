@@ -15,8 +15,8 @@
 
 	// // mobile
 	@media screen and (width < $tablet-width) {
-		background-color: blueviolet;
-		// background-image: url(../../assets/home/background-home-mobile.jpg);
+		// background-color: blueviolet;
+		background-image: url(../../assets/home/background-home-mobile.jpg);
 		--heading-fs: var(--fs-16);
 		--heading-bigword-fs: var(--fs-80);
 		--heading-bigword-line-height: 6.25rem;
@@ -37,8 +37,8 @@
 
 	// tablet
 	@media screen and ($tablet-width <= width < $desktop-width) {
-		background-color: coral;
-		// background-image: url(../../assets/home/background-home-tablet.jpg);
+		// background-color: coral;
+		background-image: url(../../assets/home/background-home-tablet.jpg);
 		--heading-fs: var(--fs-20);
 		--heading-bigword-fs: var(--fs-150);
 		--heading-bigword-line-height: 9.375rem;
@@ -59,8 +59,8 @@
 
 	// desktop
 	@media screen and (width >= $desktop-width) {
-		background-color: yellow;
-		// background-image: url(../../assets/home/background-home-desktop.jpg);
+		// background-color: yellow;
+		background-image: url(../../assets/home/background-home-desktop.jpg);
 
 		--heading-fs: var(--fs-28);
 		--heading-bigword-fs: var(--fs-150);
@@ -109,7 +109,8 @@
 
 		& > .heading {
 			// background-color: coral;
-			background-color: rebeccapurple;
+			// background-color: rebeccapurple;
+			color: white;
 			inline-size: fit-content;
 			block-size: fit-content;
 			font-family: 'Barlow Condensed', serif;
@@ -129,7 +130,8 @@
 			// // desktop
 			// @media screen and (width >= $desktop-width) {
 			// }
-			background-color: chartreuse;
+			// background-color: chartreuse;
+			color: white;
 			inline-size: var(--promo-width);
 			block-size: fit-content;
 			font-family: 'Barlow', serif;
@@ -155,6 +157,8 @@
 	}
 
 	& > .exploreBtn {
+		position: relative;
+		z-index: 1;
 		// mobile
 		@media screen and (width < $tablet-width) {
 			margin-block-start: 5rem;
@@ -174,5 +178,19 @@
 		@include helpers.circle(var(--explore-btn-dia));
 		font-family: 'Bellefair', serif;
 		font-size: var(--explore-btn-fs);
+
+		&::after {
+			position: absolute;
+			z-index: -1;
+			// z-index: 1;
+			content: '';
+			@include helpers.circle(165%);
+			background-color: inherit;
+			opacity: 0;
+		}
+
+		&:where(:hover)::after {
+			opacity: 0.3;
+		}
 	}
 }
