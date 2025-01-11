@@ -1,5 +1,4 @@
 import { Outlet } from 'react-router-dom';
-// import DeviceNav from '../../components/Device/DeviceNav';
 import styles from './Technology.module.scss';
 import Menu from '../../components/Menu/Menu';
 import deviceMenuStyles from '../../components/Device/DeviceNav.module.scss';
@@ -11,7 +10,6 @@ export default function Technology({ devices }) {
 			<h2 className={styles.heading}>
 				<span className={styles.headingNum}>03</span> SPACE LAUNCH 101
 			</h2>
-			{/* <DeviceNav devices={devices} /> */}
 			<div className={styles.deviceMenu}>
 				<Menu items={devices} title="Device Navigation" styles={deviceMenuStyles} />
 			</div>

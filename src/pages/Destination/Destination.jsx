@@ -12,7 +12,6 @@ export default function Destinations({ planets }) {
 			<h2 className={styles.heading}>
 				<span className={styles.headingNum}>01</span> PICK YOUR DESTINATION
 			</h2>
-			{/* <PlanetNav planets={planets} /> */}
 			<div className={styles.planetMenu}>
 				<Menu items={planets} title="Planet Navigation" styles={planetMenuStyles} />
 			</div>

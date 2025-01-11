@@ -1,6 +1,5 @@
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
-// import styles from './PlanetNav.module.scss';
 
 Menu.propTypes = {
 	items: PropTypes.arrayOf(PropTypes.object),
@@ -9,8 +8,6 @@ Menu.propTypes = {
 };
 
 export default function Menu({ items, title, styles }) {
-	// console.log(styles);
-
 	return (
 		<nav>
 			<h3 className="visually-hidden">{title}</h3>

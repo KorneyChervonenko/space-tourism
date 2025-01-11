@@ -30,7 +30,6 @@
 	& {
 		position: absolute;
 		z-index: 3;
-		// top: 1rem;
 		top: var(--top-offset);
 		right: 0;
 		inline-size: 100%;
@@ -63,22 +62,11 @@
 	}
 
 	> .horizontalMenu {
-		// background-color: cadetblue;
-
-		// background: hsl(var(--color-white) / 0.06);
-		// backdrop-filter: blur(2rem);
-
-		// left: 50%;
-		// transform: translateX(-50%);
-
 		background: hsl(var(white) / 0.06);
 		backdrop-filter: blur(2rem);
 
 		inline-size: var(--horizontal-menu-width);
 		block-size: var(--horizontal-menu-height);
-
-		// list-style-position: inside;
-		// list-style-type: decimal-leading-zero;
 
 		display: flex;
 		flex-direction: row;
@@ -110,18 +98,10 @@
 
 		& > li {
 			block-size: 100%;
-			// background-color: yellow;
-			// background-color: pink;
-			// display: flex;
-			// flex-direction: column;
-			// justify-content: center;
 
 			& > .pageLink {
-				// display: inline-block;
 				text-decoration: none;
 				color: white;
-				// background-color: yellow;
-				// block-size: 100%;
 				line-height: var(--horizontal-menu-height);
 			}
 
@@ -131,35 +111,20 @@
 			}
 
 			&:has(.pageLink:global(.active)) {
-				// background-color: coral;
 				border-block-end-style: solid;
 				border-block-end-width: 0.3rem;
 				border-color: white;
 			}
 		}
-
-		// > li::marker {font-weight: bold;}
-
-		// .pageLink {
-		// 	text-decoration: none;
-		// 	background-color: yellow;
-		// 	block-size: 100%;
-		// }
 	}
 
 	> .dropDownMenu {
-		// background-color: coral;
-
 		background-color: hsla(var(grey));
 		background: hsl(var(white) / 0.05);
 		backdrop-filter: blur(1.5rem);
-
-		// position: relative;
 		position: absolute;
 		right: 0rem;
 		top: 0rem;
-		// right: 1.5rem;
-		// top: 2rem;
 
 		// tablet
 		@media screen and ($tablet-width <= width < $desktop-width) {
@@ -182,14 +147,12 @@
 
 	> .dropDownMenu[open] {
 		inline-size: 15.875rem;
-		// block-size: 100vh; ????!!!!! remove scroll
+
 		block-size: var(--min-mobile-height);
 		> .dropDownMenuIcon {
-			// list-style-type: none;
 			list-style-image: url('../../assets/shared/icon-close.svg');
 		}
 		> .verticalMenu {
-			// background-color: rebeccapurple;
 			margin-block-start: 7rem;
 			margin-inline-start: 2rem;
 			block-size: 100%;
@@ -204,7 +167,6 @@
 			letter-spacing: 0.16875rem;
 
 			& > li {
-				// block-size: 2rem;
 				color: white;
 
 				& > .pageLink {

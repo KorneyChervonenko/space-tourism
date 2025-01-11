@@ -1,9 +1,6 @@
-// @import './styles/_reset.scss';
-// @import './styles/_helpers.scss';
-// @import './styles/_vars.scss';
 @use './styles/_reset.scss';
 @use './styles/_helpers.scss';
-@use './styles/_vars.scss';
+@use './styles/_vars.scss' as *;
 
 .main {
 	@extend .full-space;

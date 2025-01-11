@@ -17,7 +17,6 @@ import Device from './components/Device/Device.jsx';
 import slugify from './utils/slugify.mjs';
 
 export default function App() {
-	// console.clear();
 	const [{ planets, members, devices }, setData] = useState({});
 	const [isLoading, setIsLoading] = useState(true);
 
@@ -27,15 +26,11 @@ export default function App() {
 				setIsLoading(true);
 				const response = await fetch('../../src/assets/data/data.json');
 				const newData = await response.json();
-				// console.log(data);
 				const planets = newData.destinations.map((p) => ({ ...p, url: slugify(p.name) }));
 				const members = newData.crew.map((m) => ({ ...m, url: slugify(m.name) }));
 				const devices = newData.technology.map((d) => ({ ...d, url: slugify(d.name) }));
-				// console.log(devices);
-				// console.log(devices.at(0).url);
 
 				setData({ planets, members, devices });
-				// setCities(data);
 			} catch (err) {
 				alert(`error loading data ${err}`);
 			} finally {
@@ -52,8 +47,8 @@ export default function App() {
 			<BrowserRouter>
 				<PageNav />
 				<Routes>
-					<Route index element={<Navigate replace to="technology" />} />
-					
+					<Route index element={<Navigate replace to="home" />} />
+
 					<Route path="home" element={<Home />} />
 
 					<Route path="destination" element={<Destination planets={planets} />}>

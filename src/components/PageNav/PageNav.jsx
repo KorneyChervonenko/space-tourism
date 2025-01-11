@@ -30,9 +30,7 @@ export default function PageNav() {
 			</ol>
 
 			<details className={styles.dropDownMenu}>
-				<summary className={styles.dropDownMenuIcon}>
-					{/* <img src="src/assets/shared/icon-hamburger.svg" alt="" /> */}
-				</summary>
+				<summary className={styles.dropDownMenuIcon}></summary>
 				<ol start="0" role="menu" className={styles.verticalMenu}>
 					<li>
 						<NavLink to="/home" className={styles.pageLink}>

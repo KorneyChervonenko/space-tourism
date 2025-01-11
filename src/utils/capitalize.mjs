@@ -10,5 +10,5 @@ export function capitalize(textline) {
 	return capitalized;
 }
 
-console.log(capitalize('ffff gggg'));
-console.log(capitalize('ffffgggg'));
+// console.log(capitalize('ffff gggg'));
+// console.log(capitalize('ffffgggg'));

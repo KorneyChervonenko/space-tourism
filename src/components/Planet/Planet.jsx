@@ -1,15 +1,11 @@
 import PropTypes from 'prop-types';
 import styles from './Planet.module.scss';
-// import planetImg from '../../assets/destination/image-moon.png';
 
 Planet.propTypes = {
 	planet: PropTypes.object,
 };
 
 export default function Planet({ planet }) {
-	// console.log(planet);
-	// const { png: imgPng, webp: imgWebp } = planet.images;
-	// const imgPng = '../src/assets/destination/image-moon.png';
 	const imgPng = `../src/assets/destination/image-${planet.name.toLowerCase()}.png`;
 	const imgWebp = `../src/assets/destination/image-${planet.name.toLowerCase()}.webp`;
 	return (

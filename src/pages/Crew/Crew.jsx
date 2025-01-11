@@ -1,5 +1,4 @@
 import { Outlet } from 'react-router-dom';
-// import MemberNav from '../../components/Member/MemberNav';
 import Menu from '../../components/Menu/Menu';
 import styles from './Crew.module.scss';
 import crewMenuStyles from '../../components/Member/MemberNav.module.scss';
@@ -11,7 +10,6 @@ export default function Crew({ members }) {
 			<h2 className={styles.heading}>
 				<span className={styles.headingNum}>02</span> MEET YOUR CREW
 			</h2>
-			{/* <MemberNav members={members} /> */}
 			<div className={styles.memberMenu}>
 				<Menu items={members} title="Member Navigation" styles={crewMenuStyles} />
 			</div>
