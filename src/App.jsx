@@ -24,11 +24,13 @@ export default function App() {
 		async function fetchData() {
 			try {
 				setIsLoading(true);
-				const response = await fetch('../../src/assets/data/data.json');
+				// const response = await fetch('../../src/assets/data/data.json');
+				const response = await fetch('/assets/data/data.json');
 				const newData = await response.json();
 				const planets = newData.destinations.map((p) => ({ ...p, url: slugify(p.name) }));
 				const members = newData.crew.map((m) => ({ ...m, url: slugify(m.name) }));
 				const devices = newData.technology.map((d) => ({ ...d, url: slugify(d.name) }));
+				// console.log(planets, members, devices);
 
 				setData({ planets, members, devices });
 			} catch (err) {

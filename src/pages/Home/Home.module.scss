@@ -11,7 +11,8 @@
 
 	// // mobile
 	@media screen and (width < $tablet-width) {
-		background-image: url(../../assets/home/background-home-mobile.jpg);
+		// background-image: url('../../assets/home/background-home-mobile.jpg');
+		background-image: url('/assets/home/background-home-mobile.jpg');
 		--heading-fs: var(--fs-16);
 		--heading-bigword-fs: var(--fs-80);
 		--heading-bigword-line-height: 6.25rem;
@@ -29,7 +30,8 @@
 
 	// tablet
 	@media screen and ($tablet-width <= width < $desktop-width) {
-		background-image: url(../../assets/home/background-home-tablet.jpg);
+		// background-image: url('../../assets/home/background-home-tablet.jpg');
+		background-image: url('/assets/home/background-home-tablet.jpg');
 		--heading-fs: var(--fs-20);
 		--heading-bigword-fs: var(--fs-150);
 		--heading-bigword-line-height: 9.375rem;
@@ -47,7 +49,8 @@
 
 	// desktop
 	@media screen and (width >= $desktop-width) {
-		background-image: url(../../assets/home/background-home-desktop.jpg);
+		// background-image: url('../../assets/home/background-home-desktop.jpg');
+		background-image: url('/assets/home/background-home-desktop.jpg');
 		--heading-fs: var(--fs-28);
 		--heading-bigword-fs: var(--fs-150);
 		--heading-bigword-line-height: 9.375rem;

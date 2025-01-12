@@ -6,8 +6,13 @@ Planet.propTypes = {
 };
 
 export default function Planet({ planet }) {
-	const imgPng = `../src/assets/destination/image-${planet.name.toLowerCase()}.png`;
-	const imgWebp = `../src/assets/destination/image-${planet.name.toLowerCase()}.webp`;
+	// const imgPng = `../src/assets/destination/image-${planet.name.toLowerCase()}.png`;
+	// const imgWebp = `../src/assets/destination/image-${planet.name.toLowerCase()}.webp`;
+	const imgPath = '/assets/destination/image-';
+	const imgPng = imgPath + planet.name.toLowerCase() + '.png';
+	const imgWebp = imgPath + planet.name.toLowerCase() + '.webp';
+	// console.log(imgPng, imgWebp);
+
 	return (
 		<section className={styles.planet}>
 			<picture className={styles.planetImage}>

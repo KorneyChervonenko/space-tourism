@@ -7,7 +7,13 @@ Device.propTypes = {
 };
 
 export default function Device({ device }) {
-	const imagePath = '../src/assets/technology/';
+	// console.log(device.images.portrait);
+	// console.log(device.images.landscape);
+	// const imagePath = '../src/assets/technology/';
+	// const imgPortrait = imagePath + device.images.portrait.split('/').at(-1);
+	// const imgLandscape = imagePath + device.images.landscape.split('/').at(-1);
+	// const imagePath = '../../public/assets/technology/';
+	const imagePath = '/assets/technology/';
 	const imgPortrait = imagePath + device.images.portrait.split('/').at(-1);
 	const imgLandscape = imagePath + device.images.landscape.split('/').at(-1);
 

@@ -6,7 +6,9 @@ Member.propTypes = {
 };
 
 export default function Member({ member }) {
-	const imagePath = '../src/assets/crew/';
+	// const imagePath = '../src/assets/crew/';
+	// const imagePath = '../../public/assets/crew/';
+	const imagePath = '/assets/crew/';
 	const pngFileName = member.images.png.split('/').at(-1);
 	const webpFileName = member.images.webp.split('/').at(-1);
 	const imgPng = imagePath + pngFileName;

@@ -14,22 +14,24 @@
 
 	// // mobile
 	@media screen and (width < $tablet-width) {
-		background-image: url(../../assets/destination/background-destination-mobile.jpg);
+		// background-image: url('../../assets/destination/background-destination-mobile.jpg');
+		background-image: url('/assets/destination/background-destination-mobile.jpg');
 		--heading-fs: var(--fs-16);
 		--heading-letter-spacing: 0.16875rem;
 	}
 
 	// tablet
 	@media screen and ($tablet-width <= width < $desktop-width) {
-		background-image: url(../../assets/destination/background-destination-tablet.jpg);
+		// background-image: url('../../assets/destination/background-destination-tablet.jpg');
+		background-image: url('/assets/destination/background-destination-tablet.jpg');
 		--heading-fs: var(--fs-20);
 		--heading-letter-spacing: 0.21125rem;
 	}
 
 	// desktop
 	@media screen and (width >= $desktop-width) {
-		background-image: url(../../assets/destination/background-destination-desktop.jpg);
-
+		// background-image: url('../../assets/destination/background-destination-desktop.jpg');
+		background-image: url('/assets/destination/background-destination-desktop.jpg');
 		--heading-fs: var(--fs-28);
 		--heading-letter-spacing: 0.295rem;
 	}
