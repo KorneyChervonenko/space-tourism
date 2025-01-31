@@ -17,7 +17,7 @@ export default function Planet({ planet }) {
 		<section className={styles.planet}>
 			<picture className={styles.planetImage}>
 				<source srcSet={imgWebp} type="image/webp" />
-				<img src={imgPng} alt={planet.name} />
+				<img src={imgPng} alt={planet.name} loading="lazy" />
 			</picture>
 			<h3 className={styles.planetName}>{planet.name}</h3>
 			<div className={styles.planetDescription}>

@@ -18,7 +18,7 @@ export default function Member({ member }) {
 		<section className={styles.member}>
 			<picture className={styles.memberImage}>
 				<source srcSet={imgWebp} type="image/webp" />
-				<img src={imgPng} alt={member.name} />
+				<img src={imgPng} alt={member.name} loading="lazy" />
 			</picture>
 			<hr className={styles.horizontalLine} />
 

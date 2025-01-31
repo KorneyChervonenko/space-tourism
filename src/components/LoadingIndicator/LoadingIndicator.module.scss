@@ -3,18 +3,12 @@
 @use '../../styles/vars' as *;
 
 .LoadingIndicator {
-	background-color: red;
-	color: yellow;
-	inline-size: 20rem;
-	block-size: 10rem;
-	font-size: xx-large;
-	font-weight: bold;
-
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 1000;
+	@extend .full-space;
+	// background-color: red;
+	// color: yellow;
+	// font-size: xx-large;
+	// font-weight: bold;
+	background-color: black;
 
 	display: flex;
 	align-items: center;

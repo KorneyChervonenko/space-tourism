@@ -22,7 +22,7 @@ export default function Device({ device }) {
 			<picture className={styles.deviceImage}>
 				<source srcSet={imgPortrait} media="(min-width: 90rem)"></source>
 				<source srcSet={imgLandscape} media="(max-width: 89.99rem)"></source>
-				<img src={imgLandscape} alt={device.name} />
+				<img src={imgLandscape} alt={device.name} loading="lazy" />
 			</picture>
 			<h3 className={styles.deviceHeading}>
 				<div className={styles.deviceSubHeader}>THE TERMINOLOGY...</div>

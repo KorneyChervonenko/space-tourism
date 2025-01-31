@@ -5,11 +5,17 @@ import { lazy, Suspense, useEffect, useState } from 'react';
 import slugify from './utils/slugify.mjs';
 import './App.scss';
 
-import PageNav from './components/PageNav/PageNav.jsx';
-import Planet from './components/Planet/Planet.jsx';
-import Member from './components/Member/Member.jsx';
-import Device from './components/Device/Device.jsx';
 import LoadingIndicator from './components/LoadingIndicator/LoadingIndicator.jsx';
+
+// import PageNav from './components/PageNav/PageNav.jsx';
+// import Planet from './components/Planet/Planet.jsx';
+// import Member from './components/Member/Member.jsx';
+// import Device from './components/Device/Device.jsx';
+
+const PageNav = lazy(() => import('./components/PageNav/PageNav.jsx'));
+const Planet = lazy(() => import('./components/Planet/Planet.jsx'));
+const Member = lazy(() => import('./components/Member/Member.jsx'));
+const Device = lazy(() => import('./components/Device/Device.jsx'));
 
 // import Home from './pages/Home/Home.jsx';
 // import Destination from './pages/Destination/Destination.jsx';
@@ -54,9 +60,9 @@ export default function App() {
 		<main className="main">
 			<h1 className="visually-hidden">Space tourism</h1>
 			<BrowserRouter>
-				<PageNav />
-				{/* <LoadingIndicator /> */}
 				<Suspense fallback={<LoadingIndicator />}>
+					<PageNav />
+					{/* <LoadingIndicator /> */}
 					<Routes>
 						<Route index element={<Navigate replace to="home" />} />
 
